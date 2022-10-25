@@ -17,6 +17,7 @@ body{
 
 .menu{
     display: none;
+    cursor: pointer;
 }
 
 
@@ -94,7 +95,10 @@ justify-content: center;
 
 }
 
-@media (max-width: 640px) {
+@media (max-width: 750px) {
+    .desktop-menu{
+        display: none;
+    }
     .menu{
         display: block;
     }
@@ -108,10 +112,15 @@ justify-content: center;
     }
 }
 
+@media (min-width: 751px) {
+    .menu-container{
+        display: none;
+    }
+}
 
 
 
-
+/*fin de navar destop*/
 
 
 .desktop-menu{
@@ -168,3 +177,67 @@ margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
     
+/*fin de navar menu movil*/
+
+
+
+.menu-container{
+    top: 80px;
+    left: 20px;
+    position: absolute;
+    width: 100px;
+    height: auto;
+
+}
+
+.first-menu{
+ margin-bottom: 20px;   
+}
+.first-menu ul,
+.second-menu ul{
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
+}
+.first-menu ul li,
+.second-menu ul li{
+    margin-left: 10px;
+    height: 50px;
+    width: 80px;
+   
+}
+.title{
+    color: var(--black);
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--md);
+
+}
+
+.first-menu ul li a,
+.second-menu ul li a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--md);
+}
+
+.second-menu{
+    margin-top: 60px;
+}
+
+.footer{
+    margin-top: 80px;
+}
+
+.footer p{
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin-bottom: 3px;
+}
+
+.footer a{
+    color: var(--hospital-green);
+    text-decoration: none;
+}
