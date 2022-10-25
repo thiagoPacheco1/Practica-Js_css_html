@@ -69,8 +69,8 @@ color: var(--hospital-green);
 }
 
 .navbar-email{
-    color: var(--very-light-pink);
     cursor: pointer;
+    color: var(--very-light-pink);
     font-size: var(--sm);
     margin-right: 12px;
 }
@@ -109,23 +109,26 @@ justify-content: center;
 }
 
 
-/*fin de navar desk  inicio de navar phone*/
 
-.inactive{
-    display: none;
-}
+
+
+
 
 .desktop-menu{
     position: absolute;
+    background: var(--white);
     right: 60px;
     top: 60px;
-    background: var(--white);
     width: 100px;
     height: auto;
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
     padding: 20px 20px 0 20px;
     
+}
+
+.inactive{
+display: none;
 }
 
 .desktop-menu ul{
@@ -165,5 +168,3 @@ margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
     
-
- /*fin de navar phone  inicio de navar ...*/
