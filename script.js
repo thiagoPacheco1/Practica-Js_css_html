@@ -9,34 +9,58 @@ const titlee= document.querySelector('.titleg');
 const toggcarrito = document.querySelector('.product-detail');
 const cardsContainer = document.querySelector('.cards-container');
 
+const productDetailContainer= document.querySelector(".detalle");
+const btncerrarcompra = document.querySelector('.detalle-close');
+const ncerrarcompra = document.querySelector('.detalle');
 
-
-
+btncerrarcompra.addEventListener('click',cerrarc);
+function cerrarc() { 
+    ncerrarcompra.classList.add('inactive');
+    
+   
+    
+}
 menuEmail.addEventListener('click',toggleDesktopMenu);
 function toggleDesktopMenu() {
-    desktopMenu.classList.toggle('inactive')
+    desktopMenu.classList.toggle('inactive');
     if (!desktopMenu.classList.contains('inactive')) {
         toggcarrito.classList.add('inactive')
+        ncerrarcompra.classList.add('inactive');
+        menumovil.classList.add('inactive');
+        
+        
+
     }
 }
 MenuMovil.addEventListener('click',togglemenumovil);
 function togglemenumovil() {
+    
     menumovil.classList.toggle('inactive');
 if (!menumovil.classList.contains('inactive')) {
     toggcarrito.classList.add('inactive');
+    ncerrarcompra.classList.add('inactive');
 }
 }
 titlee.addEventListener('click',togcarrito);
 carrito.addEventListener('click',togcarrito);
 function togcarrito() {
+    
     toggcarrito.classList.toggle('inactive');
-
     if (!toggcarrito.classList.contains('inactive')) {
         menumovil.classList.add('inactive');
         desktopMenu.classList.add('inactive');
+        ncerrarcompra.classList.add('inactive');  
     }  
 }
 
+function openProductDetaiAside() {
+    productDetailContainer.classList.remove('inactive');
+    if (!productDetailContainer.classList.contains('inactive')) {
+        menumovil.classList.add('inactive');
+        desktopMenu.classList.add('inactive');
+         toggcarrito.classList.add('inactive');
+    }
+}
 
 const productList=[];
 
@@ -81,6 +105,7 @@ productCard.classList.add('product-card');
 
 const productImg = document.createElement('img');
 productImg.setAttribute('src', product.imagen);
+productImg.addEventListener('click',openProductDetaiAside);
 
 const productInfo = document.createElement('div');
 productInfo.classList.add('product-info');
