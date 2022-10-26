@@ -7,6 +7,7 @@ const MenuMovil = document.querySelector('.menu');
 const carrito = document.querySelector('.carrito');
 const titlee= document.querySelector('.titleg');
 const toggcarrito = document.querySelector('.product-detail');
+const cardsContainer = document.querySelector('.cards-container');
 
 
 
@@ -36,3 +37,82 @@ function togcarrito() {
     }  
 }
 
+
+const productList=[];
+
+productList.push({
+    name: 'Bike',
+    price: 120,
+    imagen:"/recursos/icons/bike.jpeg",
+});
+productList.push({
+    name: 'TV',
+    price: 520,
+    imagen:"/recursos/icons/bike.jpeg",
+});
+productList.push({
+    name: 'card',
+    price: 20000,
+    imagen:"/recursos/icons/bike.jpeg",
+});
+productList.push({
+    name: 'Bike',
+    price: 120,
+    imagen:"/recursos/icons/bike.jpeg",
+});
+productList.push({
+    name: 'TV',
+    price: 520,
+    imagen:"/recursos/icons/bike.jpeg",
+});
+productList.push({
+    name: 'card',
+    price: 20000,
+    imagen:"/recursos/icons/bike.jpeg",
+});
+
+
+
+function renderProducts(arr) {
+    for (product of arr){
+        
+        const productCard = document.createElement('div');
+productCard.classList.add('product-card');
+
+const productImg = document.createElement('img');
+productImg.setAttribute('src', product.imagen);
+
+const productInfo = document.createElement('div');
+productInfo.classList.add('product-info');
+
+const productInfoDiv = document.createElement('div');
+
+const productInfoDivPrice = document.createElement('p');
+productInfoDivPrice.innerHTML='$' + product.price;
+
+const productInfoDivName = document.createElement('p');
+productInfoDivName.innerHTML= product.name;
+
+productInfoDiv.appendChild(productInfoDivPrice);
+productInfoDiv.appendChild(productInfoDivName);
+
+const productInfoFigure = document.createElement('figure');
+const productImgCart = document.createElement('img');
+productImgCart.setAttribute('src', '/recursos/icons/bt_add_to_cart.svg');
+
+
+productInfoFigure.appendChild(productImgCart);
+
+
+productInfo.appendChild(productInfoDiv);
+productInfo.appendChild(productInfoFigure);  
+
+productCard.appendChild(productImg);
+productCard.appendChild(productInfo);
+
+cardsContainer.appendChild(productCard);
+};   
+
+};
+
+renderProducts(productList);

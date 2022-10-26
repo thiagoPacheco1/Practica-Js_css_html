@@ -124,6 +124,7 @@ justify-content: center;
 
 
 .desktop-menu{
+    
     position: absolute;
     background: var(--white);
     right: 60px;
@@ -182,11 +183,16 @@ margin: 0;
 
 
 .menu-container{
-    top: 80px;
-    left: 20px;
+    background-color: var(--white);
+    top: 60px;
+    left: 0px;
     position: absolute;
-    width: 100px;
-    height: auto;
+    width: 200px;
+    height: 100vh;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray; ;
+    padding-top: 5%;
+    padding-bottom: 5%;
 
 }
 
@@ -278,6 +284,7 @@ margin: 0;
 .my-order-content{
     display: flex;
     flex-direction: column;
+    padding-bottom: 10%;
 }
 
 .my-order-container{
@@ -286,10 +293,6 @@ margin: 0;
     width: 300px;
 }
 
-.my-order-content{
-    display: flex;
-    flex-direction: column;
-}
 
 .shopping-cart figure {
     margin: 0%;
@@ -378,3 +381,77 @@ color: var(--very-light-pink);
     }
     
 } 
+
+
+
+/*fin de menu movil*/
+/*inicio de home*/
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+    margin: 20px 50px;
+   
+}
+
+.product-card{
+    width: 240px;
+    
+}
+
+.product-card img{
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+    
+}
+
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items:center ;
+}
+
+.product-info figure {
+    margin: 0%;
+}
+
+.product-card figure img{
+    width: 35px;
+    height: 35px;
+}
+
+.product-info div p:nth-child(1){
+font-weight: bold;
+font-size: var(--md);
+margin-top: 0;
+margin-bottom: 4px;
+}
+
+.product-info div p:nth-child(2){
+font-size: var(--sm);
+margin-top: 0;
+margin-bottom: 0;
+color: var(--very-light-pink);
+}
+
+
+@media (max-width: 640px) {
+    .cards-container{
+        grid-template-columns: repeat(auto-fill, 140px);
+    }
+
+    .product-card{
+        width: 140px;
+
+    }
+    .product-card img{
+        width: 140px;
+        height: 140px;
+    }
+
+    
+}
