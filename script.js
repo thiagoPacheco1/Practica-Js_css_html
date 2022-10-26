@@ -17,19 +17,13 @@ function toggleDesktopMenu() {
     if (!desktopMenu.classList.contains('inactive')) {
         toggcarrito.classList.add('inactive')
     }
-
-   
-
 }
-
 MenuMovil.addEventListener('click',togglemenumovil);
 function togglemenumovil() {
     menumovil.classList.toggle('inactive');
 if (!menumovil.classList.contains('inactive')) {
     toggcarrito.classList.add('inactive');
 }
-
-
 }
 titlee.addEventListener('click',togcarrito);
 carrito.addEventListener('click',togcarrito);
@@ -39,11 +33,6 @@ function togcarrito() {
     if (!toggcarrito.classList.contains('inactive')) {
         menumovil.classList.add('inactive');
         desktopMenu.classList.add('inactive');
-        
     }  
-
-   
-
-
 }
 
